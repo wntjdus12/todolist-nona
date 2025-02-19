@@ -40,5 +40,60 @@ body {
     justify-content: space-between;
     padding: 1em;
     border-top: 1px solid lightblue;
+    
    
 }
+.task-done {
+    text-decoration: line-through;
+    background-color: lightgrey;
+    
+}
+
+
+.check-btn i {
+    color: green;
+    font-size: 24px;
+    transition: transform 0.2s ease-in-out;
+   
+}
+
+.check-btn:hover i {
+    transform: scale(1.2);
+}
+
+.delete-btn i {
+    color: red;
+    font-size: 24px;
+    transition: transform 0.2s ease-in-out;
+    border: none;
+}
+
+.delete-btn:hover i {
+    transform: scale(1.2);
+}
+.check-btn  {
+    border: none;
+    background:none;
+    
+    
+}
+.delete-btn{
+    border: none;
+    background:none;
+}
+.rotate-btn{
+    border: none;
+    background:none;
+}
+.rotate-btn i {
+    color: blue;
+    font-size: 24px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(180deg); }
+}
+
+
