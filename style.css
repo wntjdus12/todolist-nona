@@ -1,99 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+        
 body {
-    margin:0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
     background-image: url(images/OIP.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.container{
+.todo {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 3rem;
+  color: #87CEFA; /* 파스텔 블루 색 */
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.7), 
+    0 0 15px rgba(255, 255, 255, 0.5),
+    0 0 30px rgba(255, 255, 255, 0.3);
+}
+.container {
     background-color: aliceblue;
     min-height: 100vh;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+h1 {
+    text-align: center;
+    font-weight: 700;
+}
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+.input-area.active {
+    transform: translateY(10px);
+}
+#task-input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+#task-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+#add-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 18px;
+}
+#add-button:hover {
+    background: #0056b3;
 }
 .task-area {
     border: 1px solid lightblue;
 }
-
 .task-tabs {
     display: flex;
     border-bottom: 1px solid lightblue;
     position: relative;
+    justify-content: space-around;
 }
-
 .task-tabs div {
     padding: 1em;
+    cursor: pointer;
+    font-weight: 600;
 }
-
 #under-line {
     height: 4px;
     background-color: pink;
     position: absolute;
-    width:70px;
+    width: 70px;
     left: 0px;
-    top: 52px;
+    top: 55px;
     padding: 0px;
+    transition: 0.5s;
 }
-
 .task {
     display: flex;
     justify-content: space-between;
     padding: 1em;
     border-top: 1px solid lightblue;
-    
-   
 }
 .task-done {
     text-decoration: line-through;
     background-color: lightgrey;
-    
 }
-
-
 .check-btn i {
     color: green;
     font-size: 24px;
     transition: transform 0.2s ease-in-out;
-   
 }
-
 .check-btn:hover i {
     transform: scale(1.2);
 }
-
 .delete-btn i {
     color: red;
     font-size: 24px;
     transition: transform 0.2s ease-in-out;
-    border: none;
 }
-
 .delete-btn:hover i {
     transform: scale(1.2);
 }
-.check-btn  {
+.check-btn, .delete-btn, .rotate-btn {
     border: none;
-    background:none;
-    
-    
-}
-.delete-btn{
-    border: none;
-    background:none;
-}
-.rotate-btn{
-    border: none;
-    background:none;
+    background: none;
 }
 .rotate-btn i {
     color: blue;
     font-size: 24px;
     animation: spin 1s linear infinite;
 }
-
 @keyframes spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(180deg); }
 }
-
-

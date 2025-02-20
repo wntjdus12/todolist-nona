@@ -10,29 +10,20 @@
 </head>
 <body>
     <div class="container">
-        <h1>Todo List</h1>
+        <h1 class="todo">Todo List</h1>
         <section class="input-area">
-            <input type="text" id="task-input"/>
-            <button id="add-button">+</button>
+            <input type="text" id="task-input" placeholder="할 일을 입력하세요..."/>
+            <button id="add-button"><i class="fas fa-plus"></i></button>
         </section>
 
         <section class="task-area">
             <div class="task-tabs">
                 <div id="under-line"></div>
-                <div>
-                    전체
-                </div>
-                <div>
-                    진행중
-                </div>
-                <div>
-                    끝남
-                </div>
+                <div id="all" class="active">전체</div>
+                <div id="ongoing">진행중</div>
+                <div id="done">끝남</div>
             </div>
-            <div id="task-board">
-               
-            </div>
-
+            <div id="task-board"></div>
         </section>
     </div>
     
